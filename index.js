@@ -84,5 +84,17 @@ bot.on('message', message =>{
 
 });
 
+if(message.content === prefix + 'ajuda'){
+if (!args.slice(0).join(' ')) return message.reply('Diga o conteudo da votaçao!')
+    message.reply({embed:{
+        'title':'Votaçao',
+        'description':args.slice(0).join(' ')
+        ,'color':message.member.highestRole.color,
+        "thumbnail":{
+            url: message.author.avatarURL
+            }
+    }}).then(m =>{
+m.react(e1).then(m.react(e2))
+    })}
 
 bot.login(process.env.BOT_TOKEN);
