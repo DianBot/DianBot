@@ -84,7 +84,7 @@ bot.on('message', message =>{
 
 });
 
-if(message.content === prefix + 'ajuda'){
+if(message.content === prefix + 'vote'){
 if (!args.slice(0).join(' ')) return message.reply('Diga o conteudo da votaçao!')
     message.reply({embed:{
         'title':'Votaçao',
